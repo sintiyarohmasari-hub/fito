@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Fitroil Akbar 💗</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    background:linear-gradient(
+        135deg,
+        #ff4f81,
+        #ff7eb3,
+        #ffb6c8,
+        #ffd6e3
+    );
+    color:white;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:0;
+    pointer-events:none;
+}
+
+.floating{
+    position:absolute;
+    bottom:-100px;
+    animation:melayang linear infinite;
+    opacity:.85;
+}
+
+@keyframes melayang{
+    0%{
+        transform:translateY(0) rotate(0deg) scale(.7);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(-120vh)
+            rotate(360deg)
+            scale(1.5);
+        opacity:0;
+    }
+}
+
+/* =========================
+   SCREEN
+========================= */
+
+.screen{
+    width:100%;
+    min-height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:25px;
+
+    position:relative;
+    z-index:2;
+}
+
+.screen.active{
+    display:flex;
+}
+
+.card{
+    width:100%;
+    max-width:700px;
+
+    padding:40px 25px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        0 20px 60px rgba(120,0,50,.3);
+
+    text-align:center;
+
+    animation:masuk .8s ease;
+}
+
+@keyframes masuk{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.birthday-title{
+    font-size:clamp(42px,9vw,80px);
+    font-weight:900;
+    line-height:1;
+
+    text-shadow:
+        0 5px 20px rgba(130,0,50,.4);
+
+    animation:denyut 1.5s infinite;
+}
+
+@keyframes denyut{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.07);
+    }
+}
+
+.name{
+    margin-top:20px;
+
+    font-size:
+        clamp(25px,6vw,45px);
+
+    font-weight:bold;
+
+    text-shadow:
+        0 4px 15px rgba(100,0,40,.3);
+}
+
+.subtitle{
+    margin:20px auto 30px;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    max-width:500px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    color:#ff3f70;
+
+    background:white;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+    margin-top:15px;
+}
+
+button:hover{
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.3);
+}
+
+button:active{
+    transform:scale(.94);
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.photo-frame{
+    width:220px;
+    height:220px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    padding:7px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #fff,
+            #ff8faf,
+            #fff,
+            #ffb6c8
+        );
+
+    box-shadow:
+        0 0 40px rgba(255,255,255,.8);
+
+    animation:
+        putar 8s linear infinite;
+}
+
+.photo-frame img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    animation:
+        putarbalik 8s linear infinite;
+}
+
+@keyframes putar{
+    from{
+        transform:rotate(0);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes putarbalik{
+    from{
+        transform:rotate(0);
+    }
+
+    to{
+        transform:rotate(-360deg);
+    }
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.title{
+    font-size:32px;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+}
+
+.message{
+    font-size:17px;
+
+    line-height:1.9;
+
+    text-align:left;
+
+    background:
+        rgba(255,255,255,.13);
+
+    padding:22px;
+
+    border-radius:20px;
+}
+
+.message p{
+    margin-bottom:15px;
+}
+
+.center{
+    text-align:center;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.question{
+    font-size:25px;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+}
+
+.options{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:15px;
+
+    max-width:500px;
+
+    margin:auto;
+}
+
+.option{
+    padding:18px;
+
+    background:
+        rgba(255,255,255,.95);
+
+    color:#ff4775;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.1);
+}
+
+.option:hover{
+    transform:scale(1.05);
+
+    background:white;
+}
+
+.correct{
+    animation:benar .7s ease;
+}
+
+@keyframes benar{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:
+            scale(1.2)
+            rotate(3deg);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.result{
+    display:none;
+
+    margin-top:25px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    animation:pop .6s ease;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* =========================
+   MANOK PAGE
+========================= */
+
+.manok-title{
+    font-size:
+        clamp(30px,8vw,60px);
+
+    font-weight:900;
+
+    line-height:1.2;
+
+    text-shadow:
+        0 5px 15px rgba(100,0,40,.4);
+
+    animation:
+        goyang .4s infinite;
+}
+
+@keyframes goyang{
+
+    0%{
+        transform:rotate(-2deg);
+    }
+
+    50%{
+        transform:rotate(2deg);
+    }
+
+    100%{
+        transform:rotate(-2deg);
+    }
+}
+
+.laugh{
+    font-size:70px;
+
+    animation:
+        ketawa .5s infinite;
+}
+
+@keyframes ketawa{
+
+    0%,100%{
+        transform:rotate(-5deg) scale(1);
+    }
+
+    50%{
+        transform:rotate(5deg) scale(1.15);
+    }
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-heart{
+    font-size:80px;
+
+    animation:
+        denyut 1s infinite;
+}
+
+.final-text{
+    font-size:18px;
+
+    line-height:2;
+
+    margin-top:20px;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music{
+    position:fixed;
+
+    right:20px;
+    top:20px;
+
+    z-index:20;
+
+    width:50px;
+    height:50px;
+
+    padding:0;
+
+    border-radius:50%;
+
+    font-size:20px;
+
+    margin:0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .card{
+        padding:30px 18px;
+    }
+
+    .photo-frame{
+        width:180px;
+        height:180px;
+    }
+
+    .message{
+        font-size:15px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:21px;
+    }
+
+    .manok-title{
+        font-size:38px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND EMOTICON MELAYANG
+===================================================== -->
+
+<div class="background" id="background"></div>
+
+
+<!-- =====================================================
+     MUSIK
+===================================================== -->
+
+<button class="music" onclick="toggleMusic()">
+    🎵
+</button>
+
+<audio id="music" loop>
+
+    <!--
+        TARUH FILE lagu.mp3
+        DI FOLDER YANG SAMA DENGAN HTML INI
+    -->
+
+    <source src="lagu.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<!-- =====================================================
+     HALAMAN 1
+===================================================== -->
+
+<section class="screen active" id="screen1">
+
+    <div class="card">
+
+        <div style="font-size:50px;">
+            💗 🌹 💋 💕
+        </div>
+
+        <h1 class="birthday-title">
+
+            HAPPY<br>
+            BIRTHDAY
+
+        </h1>
+
+        <div class="name">
+
+            FITROIL AKBAR 💗
+
+        </div>
+
+        <p class="subtitle">
+
+            Hari ini bukan hari biasa... 🥺<br>
+
+            Karena seseorang yang spesial
+            sedang bertambah usia 💗
+
+            <br><br>
+
+            🎂✨🎉
+
+        </p>
+
+        <button onclick="nextScreen(2)">
+
+            💌 KLIK INI YA SAYANG 💋
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HALAMAN 2 - FOTO DAN UCAPAN
+===================================================== -->
+
+<section class="screen" id="screen2">
+
+    <div class="card">
+
+        <div class="photo-frame">
+
+            <!--
+                GANTI FOTO DI SINI
+
+                Nama foto:
+                foto.jpg
+
+                Letakkan foto.jpg
+                di folder yang sama
+            -->
+
+            <img
+                src="foto.jpg"
+                alt="Foto Fitroil"
+            >
+
+        </div>
+
+
+        <h2 class="title">
+
+            HAPPY BIRTHDAY SAYANG 🥺💗
+
+        </h2>
+
+
+        <div class="message">
+
+            <p>
+
+                Selamat ulang tahun untuk seseorang
+                yang sangat spesial...
+
+                yaitu kamu,
+                <b>Fitroil Akbar</b> 🥺❤️
+
+            </p>
+
+
+            <p>
+
+                Semoga di umur kamu yang sekarang,
+                semua hal baik datang satu per satu.
+
+                Semoga kamu selalu diberikan kesehatan,
+                kebahagiaan, rezeki yang lancar,
+                dan dimudahkan dalam setiap urusanmu. 🤲🏻💗
+
+            </p>
+
+
+            <p>
+
+                Aku mungkin nggak selalu bisa
+                memberikan sesuatu yang luar biasa,
+
+                tapi aku ingin kamu tahu kalau
+                keberadaan kamu itu sangat berarti. 🥺
+
+            </p>
+
+
+            <p>
+
+                Terima kasih sudah menjadi bagian
+                dari hari-hari yang aku jalani.
+
+                Terima kasih untuk semua cerita,
+                tawa, perhatian, dan hal-hal kecil
+                yang mungkin kelihatannya sederhana
+                tapi sebenarnya berarti. 💕
+
+            </p>
+
+
+            <p>
+
+                Pokoknya hari ini kamu harus bahagia yaa.
+
+                Jangan sedih,
+                jangan overthinking,
+
+                dan jangan lupa senyum karena
+                hari ini adalah hari kamu. 🫶🏻💗
+
+            </p>
+
+
+            <p class="center">
+
+                <b>
+
+                    Sekali lagi...
+                    HAPPY BIRTHDAY SAYANG! 🎂🎉💗
+
+                </b>
+
+            </p>
+
+        </div>
+
+
+        <button onclick="nextScreen(3)">
+
+            💗 KLIK LAGI SAYANG 💗
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HALAMAN 3 - TEBAK MAKANAN
+===================================================== -->
+
+<section class="screen" id="screen3">
+
+    <div class="card">
+
+        <div style="font-size:55px;">
+
+            🤭💕❓
+
+        </div>
+
+
+        <h2 class="title">
+
+            SEKARANG TEBAK-TEBAKAN 😝
+
+        </h2>
+
+
+        <p class="question">
+
+            Apa makanan favorit Salma? 👀💗
+
+        </p>
+
+
+        <div class="options">
+
+
+            <div
+                class="option"
+                onclick="wrongAnswer(this)"
+            >
+
+                🌶️ Seblak
+
+            </div>
+
+
+            <div
+                class="option"
+                onclick="correctAnswer(this)"
+            >
+
+                🍲 Bakso
+
+            </div>
+
+
+            <div
+                class="option"
+                onclick="wrongAnswer(this)"
+            >
+
+                🍚 Nasi Goreng
+
+            </div>
+
+
+            <div
+                class="option"
+                onclick="wrongAnswer(this)"
+            >
+
+                🍜 Mie Goreng
+
+            </div>
+
+
+        </div>
+
+
+        <div
+            class="result"
+            id="wrong"
+        >
+
+            😝 EITSS SALAHH<br>
+
+            COBA LAGI SAYANG 💕
+
+        </div>
+
+
+        <div
+            class="result"
+            id="correct"
+        >
+
+            🥳💗 KAMU BENARRR YEEEY!!! 💗🥳
+
+            <br>
+
+            🥹🫶🏻 PINTER BANGET SIH KAMU!
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HALAMAN 4 - PESAN HUBUNGAN
+===================================================== -->
+
+<section class="screen" id="screen4">
+
+    <div class="card">
+
+        <div style="font-size:55px;">
+
+            💗🫶🏻🌹💋
+
+        </div>
+
+
+        <h2 class="title">
+
+            SEDIKIT PESAN UNTUK KITA 💌
+
+        </h2>
+
+
+        <div class="message">
+
+
+            <p>
+
+                Untuk hubungan kita ke depannya,
+                aku nggak berharap semuanya akan
+                selalu sempurna.
+
+            </p>
+
+
+            <p>
+
+                Karena aku tahu setiap hubungan
+                pasti punya cerita.
+
+                Ada senangnya,
+                ada sedihnya,
+                ada ketawanya,
+
+                bahkan mungkin ada salah pahamnya. 🥺
+
+            </p>
+
+
+            <p>
+
+                Tapi aku berharap ketika ada masalah,
+                kita jangan langsung memilih untuk pergi.
+
+                Semoga kita bisa sama-sama belajar
+                untuk saling mengerti,
+                saling menghargai,
+                dan saling mendengarkan. ❤️
+
+            </p>
+
+
+            <p>
+
+                Kalau nanti ada sesuatu yang nggak
+                sesuai dengan keinginan kita,
+
+                semoga kita bisa membicarakannya
+                baik-baik.
+
+                Bukan saling menyalahkan,
+                tapi saling mencari jalan keluarnya. 🫶🏻
+
+            </p>
+
+
+            <p>
+
+                Aku ingin hubungan ini bukan cuma
+                tentang hari ini,
+
+                tapi tentang bagaimana kita bisa
+                terus tumbuh dan menjadi versi terbaik
+                dari diri kita masing-masing.
+
+            </p>
+
+
+            <p>
+
+                Tetap jadi Fitroil yang aku kenal yaa.
+
+                Tetap semangat,
+                tetap baik,
+                dan jangan lupa bahagia. 💗
+
+            </p>
+
+
+            <p class="center">
+
+                <b>
+
+                    Semoga di umur yang baru ini,
+                    banyak hal baik menunggu kamu. 🤲🏻❤️
+
+                </b>
+
+            </p>
+
+
+        </div>
+
+
+        <button onclick="nextScreen(5)">
+
+            💋 KLIK LAGI SATU KALI LAGI YAA SYNG 💋
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HALAMAN 5 - MANOK DI KOSOK
+===================================================== -->
+
+<section class="screen" id="screen5">
+
+    <div class="card">
+
+        <div class="laugh">
+
+            🤣😂😭
+
+        </div>
+
+
+        <h2 class="title">
+
+            EHHH BENTARRR 😭😂
+
+        </h2>
+
+
+        <p style="
+            font-size:20px;
+            line-height:1.8;
+            margin:20px 0;
+        ">
+
+            Masih ada satu hal penting<br>
+
+            yang harus kamu baca... 👀
+
+        </p>
+
+
+        <button onclick="nextScreen(6)">
+
+            💗 KLIK LAGI SATU KALI LAGI YAA SYNG 💗
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HALAMAN 6 - MANOK
+===================================================== -->
+
+<section class="screen" id="screen6">
+
+    <div class="card">
+
+
+        <div class="laugh">
+
+            🤣🤣🤣
+
+        </div>
+
+
+        <h1 class="manok-title">
+
+            MANOK DI KOSOK YOOO 😭😂
+
+        </h1>
+
+
+        <div
+            class="message center"
+            style="margin-top:25px;"
+        >
+
+
+            <p style="font-size:28px;">
+
+                <b>
+
+                    MASOKKKK AHAHAHAHAHA 🤣🤣🤣
+
+                </b>
+
+            </p>
+
+
+            <p style="font-size:35px;">
+
+                😭🤣😭🤣😭🤣
+
+            </p>
+
+
+            <p>
+
+                Maaf ya sayang 😭
+
+                Di tengah-tengah ucapan
+                yang so sweet harus ada
+                sedikit kegabutan 😂
+
+            </p>
+
+
+            <p>
+
+                Biar nggak terlalu serius...
+
+                nanti kamu malah nangis 😭🤣
+
+            </p>
+
+
+            <p style="
+                font-size:26px;
+                font-weight:bold;
+            ">
+
+                MANOK DI KOSOK YOOO
+
+                <br>
+
+                MASOKKKK AHAHAHAHA 😂😂😂
+
+            </p>
+
+
+            <p style="font-size:35px;">
+
+                🤣🤣🤣🤣🤣🤣🤣🤣🤣
+
+            </p>
+
+
+            <p>
+
+                OKEEEE SEKARANG
+                BENERAN SELESAI 😭💗
+
+            </p>
+
+
+        </div>
+
+
+        <button onclick="nextScreen(7)">
+
+            💋 OKE SEKARANG BENERAN TERAKHIR 💋
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HALAMAN 7 - FINAL
+===================================================== -->
+
+<section class="screen" id="screen7">
+
+    <div class="card">
+
+
+        <div class="final-heart">
+
+            ❤️
+
+        </div>
+
+
+        <h1 class="birthday-title">
+
+            HAPPY BIRTHDAY
+
+        </h1>
+
+
+        <h2 style="
+            margin-top:15px;
+        ">
+
+            FITROIL AKBAR 🥳💗
+
+        </h2>
+
+
+        <p class="final-text">
+
+            🎂 Semoga panjang umur
+            <br>
+
+            💰 Semoga rezekinya lancar
+            <br>
+
+            ❤️ Semoga selalu bahagia
+            <br>
+
+            🌹 Semoga semua impiannya tercapai
+            <br>
+
+            🫶🏻 Semoga selalu dikelilingi orang baik
+            <br>
+
+            ✨ Semoga tahun ini lebih indah
+            dari sebelumnya
+
+        </p>
+
+
+        <p style="
+            margin-top:25px;
+            font-size:22px;
+            font-weight:bold;
+        ">
+
+            💗💋 I LOVE YOU 💋💗
+
+        </p>
+
+
+        <p style="
+            margin-top:15px;
+        ">
+
+            — dari seseorang yang selalu
+            mendoakanmu 🥺❤️
+
+        </p>
+
+
+        <div style="
+            font-size:40px;
+            margin-top:25px;
+        ">
+
+            💕 💗 💖 💘 💝 💞
+
+        </div>
+
+
+        <p style="
+            margin-top:25px;
+            font-size:15px;
+        ">
+
+            🎀 THE END 🎀
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   PINDAH HALAMAN
+===================================================== */
+
+function nextScreen(number){
+
+    document
+        .querySelectorAll(".screen")
+        .forEach(screen => {
+
+            screen.classList.remove("active");
+
+        });
+
+
+    document
+        .getElementById("screen" + number)
+        .classList.add("active");
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   JAWABAN SALAH
+===================================================== */
+
+function wrongAnswer(element){
+
+    document
+        .getElementById("wrong")
+        .style.display="block";
+
+
+    document
+        .getElementById("correct")
+        .style.display="none";
+
+
+    element.classList.add("correct");
+
+
+    setTimeout(()=>{
+
+        element.classList.remove("correct");
+
+    },700);
+
+}
+
+
+/* =====================================================
+   JAWABAN BENAR
+===================================================== */
+
+function correctAnswer(element){
+
+    document
+        .getElementById("correct")
+        .style.display="block";
+
+
+    document
+        .getElementById("wrong")
+        .style.display="none";
+
+
+    element.classList.add("correct");
+
+
+    createExplosion();
+
+
+    setTimeout(()=>{
+
+        nextScreen(4);
+
+    },2500);
+
+}
+
+
+/* =====================================================
+   EMOTICON MELAYANG
+===================================================== */
+
+const emojis = [
+
+    "❤️",
+    "💗",
+    "💖",
+    "💘",
+    "💝",
+    "💕",
+    "💞",
+    "💓",
+    "💟",
+    "🌹",
+    "🌸",
+    "🌷",
+    "💋",
+    "🥰",
+    "😘",
+    "🫶🏻",
+    "✨"
+
+];
+
+
+function createFloatingEmoji(){
+
+    const bg =
+        document.getElementById("background");
+
+
+    const emoji =
+        document.createElement("div");
+
+
+    emoji.className="floating";
+
+
+    emoji.innerHTML =
+        emojis[
+            Math.floor(
+                Math.random()*emojis.length
+            )
+        ];
+
+
+    emoji.style.left =
+        Math.random()*100+"%";
+
+
+    emoji.style.fontSize =
+        (20+Math.random()*30)+"px";
+
+
+    emoji.style.animationDuration =
+        (5+Math.random()*7)+"s";
+
+
+    emoji.style.animationDelay =
+        Math.random()*3+"s";
+
+
+    bg.appendChild(emoji);
+
+
+    setTimeout(()=>{
+
+        emoji.remove();
+
+    },13000);
+
+}
+
+
+setInterval(
+    createFloatingEmoji,
+    350
+);
+
+
+/* =====================================================
+   LEDAKAN LOVE
+===================================================== */
+
+function createExplosion(){
+
+    for(let i=0;i<40;i++){
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.innerHTML =
+            emojis[
+                Math.floor(
+                    Math.random()*emojis.length
+                )
+            ];
+
+
+        heart.style.position="fixed";
+
+        heart.style.left="50%";
+
+        heart.style.top="50%";
+
+        heart.style.zIndex="999";
+
+        heart.style.fontSize =
+            (20+Math.random()*35)+"px";
+
+        heart.style.pointerEvents="none";
+
+
+        const x =
+            (Math.random()-0.5)*700;
+
+
+        const y =
+            (Math.random()-0.5)*700;
+
+
+        heart.animate(
+
+            [
+
+                {
+                    transform:
+                    "translate(-50%,-50%) scale(0)",
+
+                    opacity:1
+                },
+
+                {
+
+                    transform:
+                    `translate(
+                        calc(-50% + ${x}px),
+                        calc(-50% + ${y}px)
+                    ) scale(1.5)`,
+
+                    opacity:0
+
+                }
+
+            ],
+
+            {
+
+                duration:1500,
+
+                easing:"ease-out"
+
+            }
+
+        );
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },1600);
+
+    }
+
+}
+
+
+/* =====================================================
+   MUSIK
+===================================================== */
+
+const music =
+    document.getElementById("music");
+
+
+let playing=false;
+
+
+function toggleMusic(){
+
+    if(!playing){
+
+        music.play()
+
+        .then(()=>{
+
+            playing=true;
+
+        })
+
+        .catch(()=>{
+
+            alert(
+                "Masukkan file lagu.mp3 terlebih dahulu 💗"
+            );
+
+        });
+
+    }
+
+    else{
+
+        music.pause();
+
+        playing=false;
+
+    }
+
+}
+
+
+/* =====================================================
+   EFEK KLIK LOVE
+===================================================== */
+
+document.addEventListener(
+    "click",
+    function(e){
+
+        if(
+
+            e.target.tagName==="BUTTON"
+
+            ||
+
+            e.target.classList.contains(
+                "option"
+            )
+
+        ){
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.innerHTML="💗";
+
+
+            heart.style.position="fixed";
+
+            heart.style.left =
+                e.clientX+"px";
+
+            heart.style.top =
+                e.clientY+"px";
+
+            heart.style.zIndex="9999";
+
+            heart.style.pointerEvents="none";
+
+            heart.style.fontSize="25px";
+
+
+            heart.animate(
+
+                [
+
+                    {
+                        transform:
+                        "translate(-50%,-50%) scale(0)",
+
+                        opacity:1
+                    },
+
+                    {
+
+                        transform:
+                        "translate(-50%,-150px) scale(1.5)",
+
+                        opacity:0
+
+                    }
+
+                ],
+
+                {
+
+                    duration:800
+
+                }
+
+            );
+
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(()=>{
+
+                heart.remove();
+
+            },800);
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   EMOJI AWAL
+===================================================== */
+
+for(let i=0;i<25;i++){
+
+    setTimeout(
+        createFloatingEmoji,
+        i*200
+    );
+
+}
+
+</script>
+
+</body>
+</html>
